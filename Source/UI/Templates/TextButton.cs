@@ -1,0 +1,2 @@
+﻿namespace RPGGame.UI.Templates;
+

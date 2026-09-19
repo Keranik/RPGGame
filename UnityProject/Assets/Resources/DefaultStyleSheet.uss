@@ -1,0 +1,330 @@
+﻿/* ═══════════════════════════════════════════════════════════════════════════
+   RPG GAME - DEFAULT STYLESHEET
+   D&D 5e Clone Typography System
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Base reset */
+VisualElement {}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   NOTE ON TEXT TRANSFORM:
+   Unity UI Toolkit does NOT support text-transform (uppercase/lowercase).
+   Text transformation must be done in C# by modifying the string directly.
+   Use TextStyle.ApplyTextTransform(string) for this purpose.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FONT CATEGORY CLASSES
+   These can be applied to override default font assignments
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Body text (Bookinsanity) - Lore, descriptions, dialogue */
+.font-body {
+    -unity-font-definition: resource("Fonts/Raw/Bookinsanity/Bookinsanity SDF");
+}
+
+.font-body-bold {
+    -unity-font-definition: resource("Fonts/Raw/Bookinsanity/Bookinsanity Bold SDF");
+    -unity-font-style: bold;
+}
+
+.font-body-italic {
+    -unity-font-definition: resource("Fonts/Raw/Bookinsanity/Bookinsanity Italic SDF");
+    -unity-font-style: italic;
+}
+
+.font-body-bold-italic {
+    -unity-font-definition: resource("Fonts/Raw/Bookinsanity/Bookinsanity Bold Italic SDF");
+    -unity-font-style: bold-and-italic;
+}
+
+/* Heading text (Mr Eaves Small Caps) - Section headers */
+.font-heading {
+    -unity-font-definition: resource("Fonts/Raw/Mr Eaves/Mr Eaves Small Caps SDF");
+}
+
+/* Table/Stats text (Scaly Sans) - Stat blocks, tables, labels */
+.font-table {
+    -unity-font-definition: resource("Fonts/Raw/Scaly Sans/Scaly Sans SDF");
+}
+
+.font-table-bold {
+    -unity-font-definition: resource("Fonts/Raw/Scaly Sans/Scaly Sans Bold SDF");
+    -unity-font-style: bold;
+}
+
+.font-table-italic {
+    -unity-font-definition: resource("Fonts/Raw/Scaly Sans/Scaly Sans Italic SDF");
+    -unity-font-style: italic;
+}
+
+.font-table-caps {
+    -unity-font-definition: resource("Fonts/Raw/Scaly Sans/Scaly Sans Caps SDF");
+}
+
+/* Title text (Nodesto Caps Condensed) - Major titles, quest headers */
+.font-title {
+    -unity-font-definition: resource("Fonts/Raw/Nodesto/Nodesto Caps Condensed SDF");
+}
+
+.font-title-bold {
+    -unity-font-definition: resource("Fonts/Raw/Nodesto/Nodesto Caps Condensed Bold SDF");
+    -unity-font-style: bold;
+}
+
+/* Table Header text (Zatanna Misdirection) - Flavor headers */
+.font-table-header {
+    -unity-font-definition: resource("Fonts/Raw/Zatanna/Zatanna Misdirection SDF");
+}
+
+/* Drop Cap (Solbera Imitation) - First letter of lore paragraphs */
+.font-dropcap {
+    -unity-font-definition: resource("Fonts/Raw/Solbera/Solbera Imitation SDF");
+}
+
+.font-dropcap-alt {
+    -unity-font-definition: resource("Fonts/Raw/Dungeon Drop Case/Dungeon Drop Case SDF");
+}
+
+/* Monospace (JetBrains Mono) - Dice notation, coordinates, codes */
+.font-mono {
+    -unity-font-definition: resource("Fonts/Raw/Mono/Mono SDF");
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TYPOGRAPHY STYLE CLASSES
+   Pre-composed styles matching LabelStyle enum
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Display styles (Nodesto - Major titles) */
+.text-display-large {
+    -unity-font-definition: resource("Fonts/Raw/Nodesto/Nodesto Caps Condensed SDF");
+    font-size: 144px;
+    -unity-font-style: bold;
+    letter-spacing: 1px;
+}
+
+.text-display-medium {
+    -unity-font-definition: resource("Fonts/Raw/Nodesto/Nodesto Caps Condensed SDF");
+    font-size: 112px;
+    -unity-font-style: bold;
+}
+
+.text-display-small {
+    -unity-font-definition: resource("Fonts/Raw/Nodesto/Nodesto Caps Condensed SDF");
+    font-size: 88px;
+    -unity-font-style: bold;
+}
+
+/* Headline styles (Mr Eaves - Section headers) */
+.text-headline-large {
+    -unity-font-definition: resource("Fonts/Raw/Mr Eaves/Mr Eaves Small Caps SDF");
+    font-size: 72px;
+    -unity-font-style: bold;
+}
+
+.text-headline-medium {
+    -unity-font-definition: resource("Fonts/Raw/Mr Eaves/Mr Eaves Small Caps SDF");
+    font-size: 60px;
+    -unity-font-style: bold;
+}
+
+.text-headline-small {
+    -unity-font-definition: resource("Fonts/Raw/Mr Eaves/Mr Eaves Small Caps SDF");
+    font-size: 52px;
+}
+
+/* Title styles (Mr Eaves - UI element titles) */
+.text-title-large {
+    -unity-font-definition: resource("Fonts/Raw/Mr Eaves/Mr Eaves Small Caps SDF");
+    font-size: 44px;
+}
+
+.text-title-medium {
+    -unity-font-definition: resource("Fonts/Raw/Mr Eaves/Mr Eaves Small Caps SDF");
+    font-size: 36px;
+}
+
+.text-title-small {
+    -unity-font-definition: resource("Fonts/Raw/Mr Eaves/Mr Eaves Small Caps SDF");
+    font-size: 32px;
+}
+
+/* Body styles (Bookinsanity - Lore, descriptions) */
+.text-body-large {
+    -unity-font-definition: resource("Fonts/Raw/Bookinsanity/Bookinsanity SDF");
+    font-size: 36px;
+}
+
+.text-body-medium {
+    -unity-font-definition: resource("Fonts/Raw/Bookinsanity/Bookinsanity SDF");
+    font-size: 32px;
+}
+
+.text-body-small {
+    -unity-font-definition: resource("Fonts/Raw/Bookinsanity/Bookinsanity SDF");
+    font-size: 28px;
+}
+
+/* Label styles (Scaly Sans - Stats, tables) */
+.text-label-large {
+    -unity-font-definition: resource("Fonts/Raw/Scaly Sans/Scaly Sans SDF");
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.text-label-medium {
+    -unity-font-definition: resource("Fonts/Raw/Scaly Sans/Scaly Sans SDF");
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.text-label-small {
+    -unity-font-definition: resource("Fonts/Raw/Scaly Sans/Scaly Sans SDF");
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Special styles */
+.text-caption {
+    -unity-font-definition: resource("Fonts/Raw/Scaly Sans/Scaly Sans SDF");
+    font-size: 24px;
+}
+
+.text-overline {
+    -unity-font-definition: resource("Fonts/Raw/Scaly Sans/Scaly Sans SDF");
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.text-button {
+    -unity-font-definition: resource("Fonts/Raw/Scaly Sans/Scaly Sans Bold SDF");
+    font-size: 28px;
+    letter-spacing: 1px;
+    -unity-font-style: bold;
+}
+
+/* Monospace styles */
+.text-mono {
+    -unity-font-definition: resource("Fonts/Raw/Mono/Mono SDF");
+    font-size: 32px;
+}
+
+.text-mono-small {
+    -unity-font-definition: resource("Fonts/Raw/Mono/Mono SDF");
+    font-size: 28px;
+}
+
+/* Table header style (Zatanna) */
+.text-table-header {
+    -unity-font-definition: resource("Fonts/Raw/Zatanna/Zatanna Misdirection SDF");
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* Stat value style (Scaly Sans Bold) */
+.text-stat-value {
+    -unity-font-definition: resource("Fonts/Raw/Scaly Sans/Scaly Sans Bold SDF");
+    font-size: 32px;
+    -unity-font-style: bold;
+}
+
+/* Flavor text style (Bookinsanity Italic) */
+.text-flavor {
+    -unity-font-definition: resource("Fonts/Raw/Bookinsanity/Bookinsanity Italic SDF");
+    font-size: 32px;
+    -unity-font-style: italic;
+}
+
+/* Drop cap style */
+.text-dropcap {
+    -unity-font-definition: resource("Fonts/Raw/Solbera/Solbera Imitation SDF");
+    font-size: 144px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FONT WEIGHT CLASSES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.font-light {
+    -unity-font-style: normal;
+}
+
+.font-normal {
+    -unity-font-style: normal;
+}
+
+.font-bold {
+    -unity-font-style: bold;
+}
+
+.font-italic {
+    -unity-font-style: italic;
+}
+
+.font-bold-italic {
+    -unity-font-style: bold-and-italic;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TEXT ALIGNMENT CLASSES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.text-left {
+    -unity-text-align: middle-left;
+}
+
+.text-center {
+    -unity-text-align: middle-center;
+}
+
+.text-right {
+    -unity-text-align: middle-right;
+}
+
+.text-top-left {
+    -unity-text-align: upper-left;
+}
+
+.text-top-center {
+    -unity-text-align: upper-center;
+}
+
+.text-top-right {
+    -unity-text-align: upper-right;
+}
+
+.text-bottom-left {
+    -unity-text-align: lower-left;
+}
+
+.text-bottom-center {
+    -unity-text-align: lower-center;
+}
+
+.text-bottom-right {
+    -unity-text-align: lower-right;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TEXT OVERFLOW CLASSES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.text-clip {
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.text-wrap {
+    white-space: normal;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
