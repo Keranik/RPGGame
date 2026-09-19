@@ -14,10 +14,13 @@ UnityProject/Assets/Plugins/*.dll
 UnityProject/Assets/Plugins/*.pdb
 # Unity user-specific settings
 UnityProject/UserSettings/
-# Unity-generated project files
-*.csproj
+# Unity-generated project files (scoped — keep Source/*.csproj / *.sln)
+UnityProject/*.csproj
+UnityProject/*.unityproj
+UnityProject/*.sln
+UnityProject/**/*.csproj
+UnityProject/**/*.sln
 *.unityproj
-*.sln
 *.suo
 *.tmp
 *.user
@@ -28,6 +31,9 @@ UnityProject/UserSettings/
 *.pdb
 *.opendb
 *.VC.db
+# Explicit: ship the .NET solution/project under Source/
+!Source/*.csproj
+!Source/*.sln
 # Unity-generated FBX embedded texture folders (regenerated on reimport)
 *.fbm/
 # Unity crash recovery
